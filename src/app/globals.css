@@ -1,26 +1,139 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  /* Warm near-white paper */
+  --background: hsl(40 33% 98%);
+  --foreground: hsl(232 28% 18%);
+
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(232 28% 18%);
+
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(232 28% 18%);
+
+  /* Indigo — direction and trust */
+  --primary: hsl(245 58% 51%);
+  --primary-foreground: hsl(0 0% 100%);
+
+  --secondary: hsl(245 30% 95%);
+  --secondary-foreground: hsl(245 40% 30%);
+
+  --muted: hsl(240 16% 95%);
+  --muted-foreground: hsl(232 12% 45%);
+
+  /* Amber — the guiding light */
+  --accent: hsl(38 92% 50%);
+  --accent-foreground: hsl(30 50% 16%);
+
+  --destructive: hsl(0 72% 51%);
+  --destructive-foreground: hsl(0 0% 100%);
+
+  --border: hsl(240 14% 90%);
+  --input: hsl(240 14% 90%);
+  --ring: hsl(245 58% 51%);
+
+  --radius: 0.85rem;
+}
+
+.dark {
+  --background: hsl(232 33% 9%);
+  --foreground: hsl(40 20% 96%);
+
+  --card: hsl(232 28% 12%);
+  --card-foreground: hsl(40 20% 96%);
+
+  --popover: hsl(232 28% 12%);
+  --popover-foreground: hsl(40 20% 96%);
+
+  --primary: hsl(245 70% 68%);
+  --primary-foreground: hsl(232 40% 12%);
+
+  --secondary: hsl(245 20% 20%);
+  --secondary-foreground: hsl(40 20% 92%);
+
+  --muted: hsl(232 18% 18%);
+  --muted-foreground: hsl(232 12% 65%);
+
+  --accent: hsl(38 92% 58%);
+  --accent-foreground: hsl(30 50% 12%);
+
+  --destructive: hsl(0 62% 50%);
+  --destructive-foreground: hsl(0 0% 100%);
+
+  --border: hsl(232 16% 22%);
+  --input: hsl(232 16% 22%);
+  --ring: hsl(245 70% 68%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.5s ease-out both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-up {
+      animation: none;
+    }
+  }
 }
