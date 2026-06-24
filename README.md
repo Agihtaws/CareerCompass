@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="REPLACE_WITH_YOUR_IMAGE_URL" alt="CareerCompass banner" width="100%" />
+  <img src="./public/Banner.png" alt="CareerCompass banner" width="100%" />
 </p>
 
 <h1 align="center">CareerCompass</h1>
