@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="REPLACE_WITH_LIVE_URL"><b>Live App</b></a> &nbsp;•&nbsp;
+  <a href="https://career-compass-swart-three.vercel.app/"><b>Live App</b></a> &nbsp;•&nbsp;
   <a href="REPLACE_WITH_YOUTUBE_URL"><b>Demo Video</b></a> &nbsp;•&nbsp;
 </p>
 
