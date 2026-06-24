@@ -13,7 +13,6 @@
 <p align="center">
   <a href="REPLACE_WITH_LIVE_URL"><b>Live App</b></a> &nbsp;•&nbsp;
   <a href="REPLACE_WITH_YOUTUBE_URL"><b>Demo Video</b></a> &nbsp;•&nbsp;
-  <a href="REPLACE_WITH_GITHUB_REPO_URL"><b>Source Code</b></a>
 </p>
 
 ---
@@ -121,7 +120,7 @@ All services used are free to start with:
 
 ```bash
 # 1. Clone the repository
-git clone REPLACE_WITH_GITHUB_REPO_URL
+git clone https://github.com/Agihtaws/CareerCompass.git
 cd careercompass
 
 # 2. Install the dependencies
@@ -157,12 +156,9 @@ ADZUNA_COUNTRY=in
 # Courses (YouTube Data API v3)
 YOUTUBE_API_KEY=your_youtube_key
 
-# Career skills (O*NET — optional)
-ONET_USERNAME=your_onet_username
-ONET_PASSWORD=your_onet_password
+# Career skills (O*NET )
+ONET_API_KEY=your_onet_api_key
 ```
-
-> **Note:** Keep your `.env.local` file private and never commit it to GitHub.
 
 ---
 
@@ -180,22 +176,9 @@ src/
 
 ---
 
-## Deployment
-
-CareerCompass is ready to deploy on **Vercel**:
-
-1. Push the project to your GitHub repository.
-2. Import the repository into Vercel.
-3. Add the same environment variables in the Vercel project settings.
-4. Deploy.
-
----
-
 ## License
 
 This project is licensed under the **MIT License**. You are free to use, copy, modify,
 and share it. See the [LICENSE](LICENSE) file for the full text.
 
 ---
-
-<p align="center">Made with care, to help students build their future.</p>
