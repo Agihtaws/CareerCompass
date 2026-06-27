@@ -12,7 +12,7 @@
 
 <p align="center">
   <a href="https://career-compass-swart-three.vercel.app/"><b>Live App</b></a> &nbsp;•&nbsp;
-  <a href="REPLACE_WITH_YOUTUBE_URL"><b>Demo Video</b></a> &nbsp;•&nbsp;
+  <a href="https://youtu.be/XHtz2qtMzas"><b>Demo Video</b></a> &nbsp;•&nbsp;
 </p>
 
 ---
